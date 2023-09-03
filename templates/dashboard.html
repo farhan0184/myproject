@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Dashboard
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <table class="table">
+          <thead class="bg-success text-white">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Result</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+              
+              {% for key, value in result.items %}
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+                
+            </tr> 
+              {% endfor %}
+          </tbody>
+      </table>
+      </div>
+      <div class="col-4 bg-success text-white py-3 px-5">
+        <h4 class="me-4">User Name: {{ userid }}</h4>
+        <h5 class="me-4">Name: {{ name }}</h5>
+        <h6 class="me-4">Email: {{ email }}</h6>
+        <h6 class="me-4">Section: {{ section }}</h6>
+      </div>
+    </div>
+  </div>
+{% endblock %}

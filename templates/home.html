@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+  <div class="hight bg-dark d-flex justify-content-center align-items-center">
+    <section class="w-25  border-1 p-3 bg-success ">
+      <form action="" method="POST" class="">
+        {% csrf_token %}
+        <div>
+          <label class="" for="userid">UserID</label>
+          <br />
+          <input class="border border-0 rounded p-2 my-2 w-100" type="text" name="userid" id="userid" placeholder="Your UserID" />
+        </div>
+        <div>
+          <label class="" for="password">Password</label>
+          <br />
+          <input class="border border-0 rounded p-2 my-2 w-100" type="password" name="password" id="password" placeholder="password" />
+        </div>
+        <button class="border border-0 rounded px-3 py-2">Submit</button>
+      </form>
+    </section>
+  </div>
+{% endblock %}
